@@ -1,9 +1,10 @@
 import React from "react";
-
+import './footer.scss'
 const Footer = () => {
   return (
-  <div>
-Footer component
+  <div className="footer">
+ <img src="" alt ="logo"/>
+ <p>@2020 Kasa. All rights reserved</p>
   </div>
   );
 };

@@ -1,10 +1,19 @@
 import React from "react";
+import './header.scss'
 
 const Header = () => {
   return (
-  <div>
-Header component
-  </div>
+    <header>
+
+
+            <img src="" alt="logo"/>
+            <nav>
+                <ul id="liens">
+                    <li ><a href="">Accueil</a></li>
+                    <li><a href="">A propos</a></li>
+                </ul>
+            </nav>
+        </header>
   );
 };
 
