@@ -1,84 +1,22 @@
-import React from 'react';
+import React from "react";
+import data from "../logements.json"; 
+
+import "./home.scss";
 
 const Home = () => {
   return (
-    <div>
-      <a href="#">
-        <article className="card">
-          <img src="" alt="" />
-          <div className="card-content">
-            <div className="card-txt">
-              <h3 className="card-title">Card</h3>
+    <div className="card-logement">
+      {data.map((logement) => (
+        <a key={logement.id} href={`/fiche-logement/${logement.id}`}>
+          <article className="card">
+            <img src={logement.cover} alt={logement.title} />
+            <div className="card-content">
+              <h3 className="card-title">{logement.title}</h3>
+              <p className="card-location">{logement.location}</p>
             </div>
-          </div>
-        </article>
-      </a>
-
-      <a href="#">
-        <article className="card">
-          <img src="" alt="" />
-          <div className="card-content">
-            <div className="card-txt">
-              <h3 className="card-title">Card</h3>
-            </div>
-          </div>
-        </article>
-      </a>
-
-      <a href="#">
-        <article className="card">
-          <img src="" alt="" />
-          <div className="card-content">
-            <div className="card-txt">
-              <h3 className="card-title">Card</h3>
-            </div>
-          </div>
-        </article>
-      </a>
-
-      <a href="#">
-        <article className="card">
-          <img src="" alt="" />
-          <div className="card-content">
-            <div className="card-txt">
-              <h3 className="card-title">Card</h3>
-            </div>
-          </div>
-        </article>
-      </a>
-
-      <a href="#">
-        <article className="card">
-          <img src="" alt="" />
-          <div className="card-content">
-            <div className="card-txt">
-              <h3 className="card-title">Card</h3>
-            </div>
-          </div>
-        </article>
-      </a>
-
-      <a href="#">
-        <article className="card">
-          <img src="" alt="" />
-          <div className="card-content">
-            <div className="card-txt">
-              <h3 className="card-title">Card</h3>
-            </div>
-          </div>
-        </article>
-      </a>
-
-      <a href="#">
-        <article className="card">
-          <img src="" alt="" />
-          <div className="card-content">
-            <div className="card-txt">
-              <h3 className="card-title">Card</h3>
-            </div>
-          </div>
-        </article>
-      </a>
+          </article>
+        </a>
+      ))}
     </div>
   );
 };
