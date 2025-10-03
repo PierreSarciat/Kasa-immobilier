@@ -1,0 +1,23 @@
+.erreur-page {
+  display: flex;
+  flex-direction: column;     
+  justify-content: center;    
+  align-items: center;        
+  width: 100%;
+  min-height: 100vh;          
+  text-align: center;         
+
+  p:first-child {
+    font-size: 597px;
+    font-weight: 700;
+  }
+
+  p:nth-child(2) {
+    font-size: 1.5rem;
+  }
+
+  p:last-child {
+    font-size: 1rem;
+  }
+}
+

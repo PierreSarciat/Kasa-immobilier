@@ -5,6 +5,10 @@ import "./home.scss";
 
 const Home = () => {
   return (
+    <>
+    <div className="slogan">
+<p>Chez vous, partout et ailleurs</p>
+</div>
     <div className="card-logement">
       {data.map((logement) => (
         <a key={logement.id} href={`/fiche-logement/${logement.id}`}>
@@ -18,6 +22,8 @@ const Home = () => {
         </a>
       ))}
     </div>
+    </>
+
   );
 };
 
