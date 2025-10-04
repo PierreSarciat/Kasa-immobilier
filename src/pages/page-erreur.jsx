@@ -1,6 +1,7 @@
 import React from 'react';
 import "./page-erreur.scss"
 
+
 const Erreur=() => {
     return (
         <div className='erreur-page'>
