@@ -5,7 +5,6 @@ const Header = () => {
   return (
     <header>
 
-
             <img src="../public/LOGO.png" alt="logo"/>
             <nav>
                 <ul id="liens">
