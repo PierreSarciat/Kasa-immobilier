@@ -43,7 +43,7 @@ const Home = () => {
 
       <div className="card-logement">
         {logements.map((logement) => (
-          <Link key={logement.id} to={`/fiche-logement/${logement.id}`}>
+          <Link key={logement.id} to={`/fiche-logements/${logement.id}`}>
             <article className="card">
               <img src={logement.cover} alt={logement.title} />
               
