@@ -1,3 +1,5 @@
+@use "../styles/variable.scss" as *;
+
 .dropdown {
   width: 100%;
 
@@ -5,20 +7,19 @@
     width: 100%;
     padding: 10px 15px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 700;
     text-align: left;
+    color:$titlecolor ;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background: #f7f7f7;
+    background: $maincolor;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
 
-    &:hover {
-      background: #eee;
-    }
+    
   }
 
   .dropdown-content {
