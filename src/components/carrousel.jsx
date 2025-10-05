@@ -3,9 +3,9 @@ import "./carrousel.scss";
 
 
 
-const Carrousel = ({ pictures = [] }) => { // ✅ valeur par défaut
+const Carrousel = ({ pictures = [] }) => { 
   const [current, setCurrent] = useState(0);
-  const length = pictures?.length || 0;   // ✅ évite l’erreur
+  const length = pictures?.length || 0;   
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -19,7 +19,7 @@ const Carrousel = ({ pictures = [] }) => { // ✅ valeur par défaut
     return <div className="carrousel-empty">Aucune image disponible</div>;
   }
   return (
-    <div className="carousel">
+    <div className="carrousel">
       {length > 1 && (
         <button className="carrousel-control prev" onClick={prevSlide}>
           ❮
@@ -28,30 +28,25 @@ const Carrousel = ({ pictures = [] }) => { // ✅ valeur par défaut
 
        {pictures.map((img, index) => (
         <div
-          className={index === current ? "carousel-item active" : "carousel-item"}
+          className={index === current ? "carrousel-item active" : "carousel-item"}
           key={index}
         >
           {index === current && (
-            <img src={img} alt={`slide ${index + 1}`} className="carousel-image" />
+            <img src={img} alt={`slide ${index + 1}`} className="carrousel-image" />
           )}
         </div>
       ))}
 
       {length > 1 && (
-        <button className="carousel-control next" onClick={nextSlide}>
+        <button className="carrousel-control next" onClick={nextSlide}>
           ❯
         </button>
       )}
 
+       
       {length > 1 && (
-        <div className="carousel-indicators">
-          {pictures.map((_, index) => (
-            <button
-              key={index}
-              className={index === current ? "active" : ""}
-              onClick={() => setCurrent(index)}
-            ></button>
-          ))}
+        <div className="carrousel-counter">
+          {current + 1} / {length}
         </div>
       )}
     </div>

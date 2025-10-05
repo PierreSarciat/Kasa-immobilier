@@ -1,16 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./fiche-logements.scss"
-import data from "../../public/logements.json";
 import Carrousel from "../components/carrousel.jsx";
+import Dropdown from "../components/dropdown.jsx";
+import "./fiche-logements.scss";
 
 const FicheLogement = () => {
   const { id } = useParams();
-  const logement = data.find(item => item.id === id);
+  const [logement, setLogement] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  if (!logement) {
-    return <div>Logement introuvable</div>;
-  }
+  useEffect(() => {
+    fetch("/logements.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Erreur lors du chargement des données");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const found = data.find((item) => item.id === id);
+        setLogement(found || null);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setLoading(false);
+      });
+  }, [id]);
+
+  if (loading) return <p>Chargement...</p>;
+  if (!logement) return <p>Logement introuvable</p>;
 
   return (
     <div className="logement-page">
@@ -18,9 +37,22 @@ const FicheLogement = () => {
 
       <h1>{logement.title}</h1>
       <p>{logement.location}</p>
+
+      <Dropdown title="Description">
+        <p>{logement.description}</p>
+      </Dropdown>
+
+      {logement.equipments && (
+        <Dropdown title="Équipements">
+          <ul>
+            {logement.equipments.map((equip, index) => (
+              <li key={index}>{equip}</li>
+            ))}
+          </ul>
+        </Dropdown>
+      )}
     </div>
   );
 };
 
-
-export default FicheLogement
+export default FicheLogement;
