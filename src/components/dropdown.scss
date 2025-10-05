@@ -1,7 +1,7 @@
 @use "../styles/variable.scss" as *;
 
 .dropdown {
-  width: 100%;
+    width: 100%;
 
   .dropdown-button {
     width: 100%;
@@ -31,4 +31,10 @@
     line-height: 1.5;
     margin-bottom: 20px;
   }
+
+  .dropdown-icon {
+  width: 24px;  
+  height: 15px;  
+}
+
 }

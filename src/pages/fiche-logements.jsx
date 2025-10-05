@@ -38,19 +38,29 @@ const FicheLogement = () => {
       <h1>{logement.title}</h1>
       <p>{logement.location}</p>
 
-      <Dropdown title="Description">
-        <p>{logement.description}</p>
-      </Dropdown>
-
-      {logement.equipments && (
-        <Dropdown title="Équipements">
-          <ul>
-            {logement.equipments.map((equip, index) => (
-              <li key={index}>{equip}</li>
-            ))}
-          </ul>
+ <div className="tags">
+        {logement.tags?.map((tag, index) => (
+          <span key={index} className="tag">
+            {tag}
+          </span>
+        ))}
+      </div>
+      
+      <div className="dropdown-content">
+        <Dropdown title="Description">
+          <p>{logement.description}</p>
         </Dropdown>
-      )}
+
+        {logement.equipments && (
+          <Dropdown title="Équipements">
+            <ul>
+              {logement.equipments.map((equip, index) => (
+                <li key={index}>{equip}</li>
+              ))}
+            </ul>
+          </Dropdown>
+        )}
+      </div>
     </div>
   );
 };

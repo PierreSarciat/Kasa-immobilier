@@ -1,0 +1,11 @@
+@use "../styles/variable.scss" as *;
+
+.rating {
+  display: flex;
+  gap: 5px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
