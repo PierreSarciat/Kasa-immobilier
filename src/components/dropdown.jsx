@@ -9,7 +9,7 @@ const Dropdown = ({ title, children }) => {
       <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
         {title}
         <img
-          src={isOpen ? "/VectorO.png" : "/VectorF.png"}  // ✅ ne pas mettre ../public
+          src={isOpen ? "/VectorO.png" : "/VectorF.png"}  
           alt={isOpen ? "fermer" : "ouvrir"}
           className="dropdown-icon"
         />

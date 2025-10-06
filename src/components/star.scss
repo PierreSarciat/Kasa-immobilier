@@ -1,11 +1,16 @@
 @use "../styles/variable.scss" as *;
 
-.rating {
-  display: flex;
-  gap: 5px;
+.star {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
 
-  svg {
-    width: 24px;
-    height: 24px;
+  &.filled {
+    fill: $maincolor; // #FF6060
+  }
+
+  &.empty {
+    fill: #E3E3E3;
   }
 }
+
