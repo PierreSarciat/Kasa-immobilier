@@ -1,0 +1,25 @@
+ .sloganAP {
+  position: relative;               
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  height: 223px;
+  overflow: hidden;  
+  margin: 40px;               
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/image-source-2.png') no-repeat center/cover;
+                  
+    background-color: rgba(0,0,0,0.6); 
+    background-blend-mode: darken;   
+    z-index: 0;
+  }
+
+}

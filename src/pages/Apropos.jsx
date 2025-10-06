@@ -1,10 +1,13 @@
 import React from 'react';
+import"./Apropos.scss";
 
 const Apropos = () => {
     return (
-        <div>
-        A propos
-        </div>
+        <>
+        <div className="sloganAP">
+        
+      </div>
+        </>
     );
 };
 
