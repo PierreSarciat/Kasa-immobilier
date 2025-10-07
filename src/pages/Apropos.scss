@@ -1,8 +1,5 @@
  .sloganAP {
   position: relative;               
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 25px;
   height: 223px;
   overflow: hidden;  
@@ -16,10 +13,27 @@
     right: 0;
     bottom: 0;
     background: url('/image-source-2.png') no-repeat center/cover;
-                  
-    background-color: rgba(0,0,0,0.6); 
+    background-color: rgba(0,0,0,0.3); 
     background-blend-mode: darken;   
-    z-index: 0;
+  
   }
 
 }
+
+.dropdown-contentAP {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+    box-sizing: border-box;    
+     margin: 0 auto;
+  
+   
+  p {
+   
+       
+    padding: 0px 10px 0px 10px;    
+   
+  }
+}
+
