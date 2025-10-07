@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom"; // ajout de useNavigate
 import Carrousel from "../components/carrousel.jsx";
 import Dropdown from "../components/dropdown.jsx";
 import Star from "../components/Star.jsx";
@@ -7,32 +7,41 @@ import "./fiche-logements.scss";
 
 const FicheLogement = () => {
   const { id } = useParams();
+  const navigate = useNavigate(); // hook pour redirection
+
   const [logement, setLogement] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/logements.json")
-      .then((response) => {
+    const fetchLogement = async () => {
+      try {
+        const response = await fetch("/logements.json");
         if (!response.ok) {
           throw new Error("Erreur lors du chargement des données");
         }
-        return response.json();
-      })
-      .then((data) => {
+        const data = await response.json();
         const found = data.find((item) => item.id === id);
-        setLogement(found || null);
-        setLoading(false);
-      })
-      .catch((error) => {
+
+        if (!found) {
+          // Redirection vers la page d'erreur si l'id n'existe pas
+          navigate("/page-erreur", { replace: true });
+          return;
+        }
+
+        setLogement(found);
+      } catch (error) {
         console.error(error);
+        navigate("/page-erreur", { replace: true });
+      } finally {
         setLoading(false);
-      });
-  }, [id]);
+      }
+    };
+
+    fetchLogement();
+  }, [id, navigate]);
 
   if (loading) return <p>Chargement...</p>;
-  if (!logement) return <p>Logement introuvable</p>;
-
-  /*const maxRating = 5;*/
+  // Plus besoin de "Pas de logement" car on redirige déjà
 
   return (
     <div className="logement-page">
@@ -67,7 +76,6 @@ const FicheLogement = () => {
               <Star key={i} filled={i < logement.rating} />
             ))}
           </div>
-
         </div>
       </div>
 

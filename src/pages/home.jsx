@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
 import "./home.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [logements, setLogements] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Remplace l'URL par l'endroit où se trouve ton JSON
-    fetch("/logements.json")
-      .then((response) => {
+    const fetchLogements = async () => {
+      try {
+        const response = await fetch("/logements.json");
         if (!response.ok) {
-          throw new Error("Erreur lors du chargement des données");
+          // Redirection vers la page d'erreur si le fichier JSON est introuvable
+          navigate("/page-erreur", { replace: true });
+          return;
         }
-        return response.json();
-      })
-      .then((data) => {
+        const data = await response.json();
         // On ne garde que id, title et cover
         const simplifiedData = data.map(({ id, title, cover }) => ({
           id,
@@ -23,13 +24,16 @@ const Home = () => {
           cover,
         }));
         setLogements(simplifiedData);
-        setLoading(false);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error(error);
+        navigate("/page-erreur", { replace: true });
+      } finally {
         setLoading(false);
-      });
-  }, []);
+      }
+    };
+
+    fetchLogements();
+  }, [navigate]);
 
   if (loading) {
     return <p>Chargement...</p>;
@@ -46,9 +50,7 @@ const Home = () => {
           <Link key={logement.id} to={`/fiche-logements/${logement.id}`}>
             <article className="card">
               <img src={logement.cover} alt={logement.title} />
-              
-                <h3 className="card-title">{logement.title}</h3>
-              
+              <h3 className="card-title">{logement.title}</h3>
             </article>
           </Link>
         ))}
@@ -58,4 +60,3 @@ const Home = () => {
 };
 
 export default Home;
-

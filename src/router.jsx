@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         element:<FicheLogement/>
        },
        {
-        path:'/page-erreur',
+        path:'/*',
         element:<Erreur/>
        },
        {
