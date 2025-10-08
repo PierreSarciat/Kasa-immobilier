@@ -1,7 +1,7 @@
 @use "../styles/variable.scss" as *;
 
 .dropdown {
-    width: 100%;
+  width: 100%;
 
   .dropdown-button {
     width: 100%;
@@ -9,7 +9,7 @@
     font-size: 18px;
     font-weight: 700;
     text-align: left;
-    color:$titlecolor ;
+    color: $titlecolor;
     border: 1px solid #ccc;
     border-radius: 8px;
     background: $maincolor;
@@ -18,15 +18,19 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-
-    
   }
 
-   
-
   .dropdown-icon {
-  width: 24px;  
-  height: 15px;  
-}
+    width: 24px;
+    height: 15px;
+    transform-origin: center;
+    transform: rotate(0deg);
+    transition: transform 0.4s ease-in-out; 
+  }
 
+  &.open {
+    .dropdown-icon {
+      transform: rotate(-180deg); 
+    }
+  }
 }

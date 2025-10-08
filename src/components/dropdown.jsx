@@ -5,12 +5,12 @@ const Dropdown = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="dropdown">
+    <div className={`dropdown ${isOpen ? "open" : ""}`}>
       <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
         {title}
         <img
-          src={isOpen ? "/VectorO.png" : "/VectorF.png"}  
-          alt={isOpen ? "fermer" : "ouvrir"}
+          src="/VectorF.png"  
+          alt="icône du menu"
           className="dropdown-icon"
         />
       </button>
@@ -21,4 +21,5 @@ const Dropdown = ({ title, children }) => {
 };
 
 export default Dropdown;
+
 
