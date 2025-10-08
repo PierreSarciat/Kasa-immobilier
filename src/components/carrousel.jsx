@@ -22,7 +22,10 @@ const Carrousel = ({ pictures = [] }) => {
     <div className="carrousel">
       {length > 1 && (
         <button className="carrousel-control prev" onClick={prevSlide}>
-          ❮
+          <img
+        src="/arrow_back.png" 
+        alt="précédent"        
+      />
         </button>
       )}
 
@@ -39,7 +42,10 @@ const Carrousel = ({ pictures = [] }) => {
 
       {length > 1 && (
         <button className="carrousel-control next" onClick={nextSlide}>
-          ❯
+         <img
+        src="/arrow_next.png" 
+        alt="suivant"        
+      />
         </button>
       )}
 
