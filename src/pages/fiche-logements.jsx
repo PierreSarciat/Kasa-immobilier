@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom"; // ajout de useNavigate
-import Carrousel from "../components/carrousel.jsx";
-import Dropdown from "../components/dropdown.jsx";
-import Star from "../components/Star.jsx";
+import Carrousel from "@components/carrousel.jsx";
+import Dropdown from "@components/dropdown.jsx";
+import Star from "@components/Star.jsx";
 import "./fiche-logements.scss";
 
 const FicheLogement = () => {

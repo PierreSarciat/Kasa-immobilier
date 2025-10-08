@@ -1,6 +1,6 @@
 import React from 'react';
 import"./Apropos.scss";
-import Dropdown from "../components/dropdown.jsx";
+import Dropdown from "@components/dropdown.jsx";
 
 const Apropos = () => {
     return (
