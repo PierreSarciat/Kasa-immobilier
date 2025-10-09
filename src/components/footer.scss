@@ -1,3 +1,5 @@
+@use "../styles/variable.scss" as *;
+
 .footer {
     padding-top: 50px;
     padding-bottom: 10px;
@@ -9,5 +11,9 @@
     width: 100vw;
     box-sizing: border-box;
     margin-left: calc(50% - 50vw);
+
+    p{
+        color:$titlecolor ;
+    }
     
 }

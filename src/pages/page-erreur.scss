@@ -5,12 +5,11 @@
 
 .erreur-page {
   display: flex;
-  flex-direction: column;  
-  flex-grow: 1;   
-  justify-content: center;    
-  align-items: center;        
-  width: 100%;       
-  text-align: center;         
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 40vw;
+  padding-bottom: 30px;
 
   p:first-child,
   p:nth-child(2) {
@@ -29,8 +28,10 @@
     
   }
 
-  p:last-child {
+  a {
     font-size: 1rem;
+    text-decoration: underline;
+    
   }
 }
 

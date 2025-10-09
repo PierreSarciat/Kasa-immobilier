@@ -1,7 +1,7 @@
 
 
-html, body, #root {
-  max-width: 1240x;
+html, body, #root, main {
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0;
 }
@@ -33,14 +33,4 @@ html, body, #root {
 
 
 
-/* Screen=Desktop, Active=Accueil */
-
-/*width: 1240px;
-height: 68px;*/
-
-
-/* Inside auto layout */
-/*flex: none;
-order: 0;
-flex-grow: 0;*/
 

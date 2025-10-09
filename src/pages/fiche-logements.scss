@@ -1,13 +1,7 @@
 @use "../styles/variable.scss" as *;
 
 .logement-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1280px;
-  margin: 0 auto;
   padding: 40px 20px;
-  gap: 20px;
 
   .logement-header {
     display: flex;
@@ -79,16 +73,16 @@
     }
   }
 
- .dropdown-content {
+  .dropdown-content {
     display: flex;
     gap: 20px;
     width: 100%;
-    box-sizing: border-box;    
+    box-sizing: border-box;
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
     margin-top: 10px;
   }
-   
-  
+
+
 }

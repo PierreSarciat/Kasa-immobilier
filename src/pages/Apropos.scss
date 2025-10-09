@@ -1,39 +1,38 @@
  .sloganAP {
-  position: relative;               
-  border-radius: 25px;
-  height: 223px;
-  overflow: hidden;  
-  margin: 40px;               
+   position: relative;
+   border-radius: 25px;
+   height: 223px;
+   overflow: hidden;
+   margin: 20px 20px 30px 20px;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('/image-source-2.png') no-repeat center/cover;
-    background-color: rgba(0,0,0,0.3); 
-    background-blend-mode: darken;   
-  
-  }
+   &::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: url('/image-source-2.png') no-repeat center/cover;
+     background-color: rgba(0, 0, 0, 0.3);
+     background-blend-mode: darken;
 
-}
+   }
 
-.dropdown-contentAP {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 70%;
-    box-sizing: border-box;    
-     margin: 0 auto;
-  
-   
-  p {
-   
-       
-    padding: 0px 10px 0px 10px;    
-   
-  }
-}
+ }
 
+ .dropdown-contentAP {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 70%;
+   box-sizing: border-box;
+   margin: 0 auto;
+
+
+   p {
+
+
+     padding: 0px 10px 0px 10px;
+
+   }
+ }
