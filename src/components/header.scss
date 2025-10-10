@@ -15,7 +15,7 @@ header {
 
   ul {
     display: flex;
-    gap: 50px;
+    gap:2.5em;
     list-style: none;
   }
 
@@ -32,4 +32,16 @@ header {
       }
     }
   }
+}
+
+@media (max-width:480px){
+
+  header img{
+    width: 145px;
+    height: 46px;
+  }
+
+  header ul {
+  font-size: 12px;
+}
 }
