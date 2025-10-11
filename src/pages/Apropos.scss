@@ -2,6 +2,7 @@
    position: relative;
    border-radius: 25px;
    height: 223px;
+   max-width: 1240px;
    overflow: hidden;
    margin: 20px 20px 30px 20px;
 
@@ -30,9 +31,29 @@
 
 
    p {
-
-
      padding: 0px 10px 0px 10px;
-
    }
  }
+
+ @media (max-width:480px){
+
+  .sloganAP{
+    height: 111px;
+   aspect-ratio: 1240/223;
+  }
+
+ 
+
+ .dropdown-contentAP {
+   width: 90%;
+   box-sizing: border-box;
+   margin: 0 auto;
+
+
+   p {
+    font-size: 12px;
+    padding: 0px 10px 0px 10px;
+   }
+ }
+
+}
