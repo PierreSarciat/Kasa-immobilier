@@ -8,7 +8,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 40vw;
   padding-bottom: 30px;
 
   p:first-child,
@@ -33,5 +32,36 @@
     text-decoration: underline;
     
   }
+}
+
+
+
+@media (max-width:480px) {
+
+
+.erreur-page {
+
+ p:first-child {
+    font-size: 96px;
+   
+
+}
+
+p:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+    font-size: 18px;
+
+    
+  }
+
+  a {
+
+    font-size: 14px;
+    
+  }
+
+}
+
 }
 
