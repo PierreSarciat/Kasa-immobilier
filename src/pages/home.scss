@@ -104,8 +104,8 @@
 @media (max-width:800px) {
 
   .card-logement {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
 }
@@ -128,15 +128,15 @@
   }
 
 
-.card-logement {
-  display: flex;
-  flex-direction: column;
+  .card-logement {
+    display: flex;
+    flex-direction: column;
 
 
- img {
-   
-   
-    height: 255px;
- }
-} 
+    img {
+
+
+      height: 255px;
+    }
+  }
 }
