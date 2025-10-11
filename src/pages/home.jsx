@@ -42,7 +42,8 @@ const Home = () => {
   return (
     <>
       <div className="slogan">
-        <p>Chez vous, partout et ailleurs</p>
+        <p><span> Chez vous,</span> partout et ailleurs</p>
+
       </div>
 
       <div className="card-logement">
