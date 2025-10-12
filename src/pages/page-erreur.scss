@@ -15,23 +15,23 @@
   p:nth-child(2) {
     color: $maincolor;
   }
-  
+
   p:first-child {
     font-size: 200px;
     font-weight: 700;
     margin: 0;
-    
+
   }
 
   p:nth-child(2) {
     font-size: 1.5rem;
-    
+
   }
 
   a {
     font-size: 1rem;
     text-decoration: underline;
-    
+
   }
 }
 
@@ -40,29 +40,33 @@
 @media (max-width:480px) {
 
 
-.erreur-page {
+  .erreur-page {
 
- p:first-child {
-    font-size: 96px;
-   
+  padding-bottom: 30px;
+  height: 90vw;
+  margin-top: 50px;
 
-}
+    p:first-child {
+      font-size: 96px;
 
-p:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-    font-size: 18px;
 
-    
+    }
+
+    p:nth-child(2) {
+      font-size: 18px;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+
+
+    }
+
+    a {
+
+      font-size: 14px;
+
+    }
+
   }
 
-  a {
-
-    font-size: 14px;
-    
-  }
-
 }
-
-}
-

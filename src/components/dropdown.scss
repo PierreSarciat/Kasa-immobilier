@@ -22,7 +22,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
     transition: background-color 0.3s ease-in-out;
 
     &:hover {
@@ -44,7 +43,7 @@
   }
 
   /* --- Contenu qui se déploie --- */
-  .dropdown-content {    
+  .dropdown-content {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -53,15 +52,15 @@
       max-height 0.5s ease,
       opacity 0.4s ease,
       transform 0.4s ease;
+    background-color: #F6F6F673;
 
     p {
-      margin: 10px 0;
       padding: 0 10px;
-      font-size: 16px;    
-     
+      font-size: 16px;
+
     }
 
-    
+
   }
 }
 
