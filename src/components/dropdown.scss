@@ -1,7 +1,12 @@
 @use "../styles/variable.scss" as *;
 
+
 .dropdown {
   width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  transition: all 0.4s ease-in-out;
 
   .dropdown-button {
     width: 100%;
@@ -18,8 +23,14 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background: lighten($maincolor, 5%);
+    }
   }
 
+  /* --- L'icône qui pivote --- */
   .dropdown-icon {
     width: 24px;
     height: 15px;
@@ -28,12 +39,32 @@
     transition: transform 0.4s ease-in-out;
   }
 
-  &.open {
-    .dropdown-icon {
-      transform: rotate(-180deg);
+  &.open .dropdown-icon {
+    transform: rotate(-180deg);
+  }
+
+  /* --- Contenu qui se déploie --- */
+  .dropdown-content {    
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      max-height 0.5s ease,
+      opacity 0.4s ease,
+      transform 0.4s ease;
+
+    p {
+      margin: 10px 0;
+      padding: 0 10px;
+      font-size: 16px;    
+     
     }
+
+    
   }
 }
+
 
 @media (max-width:480px) {
 

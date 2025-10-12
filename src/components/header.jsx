@@ -1,6 +1,6 @@
 import React from "react";
 import './header.scss'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -9,8 +9,16 @@ const Header = () => {
       <img src="../public/LOGO.png" alt="logo" />
       <nav>
         <ul>
-          <li><Link to="/">Accueil</Link></li>
-          <li><Link to="/Apropos">A propos</Link></li>
+          <li>
+            <NavLink to="/" end>
+              Accueil
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/Apropos">
+              A propos
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

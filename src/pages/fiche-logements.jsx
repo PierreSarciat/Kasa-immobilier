@@ -87,11 +87,13 @@ const FicheLogement = () => {
 
         {logement.equipments && (
           <Dropdown title="Équipements">
-            <ul>
+           
+             <ul>
               {logement.equipments.map((equip, index) => (
                 <li key={index}>{equip}</li>
               ))}
             </ul>
+            
           </Dropdown>
         )}
       </div>
