@@ -1,16 +1,53 @@
-# React + Vite
+Refonte complète du front-end d’une application afin de migrer vers une stack JavaScript moderne. L’interface a été entièrement reconstruite en React, en respectant une architecture modulaire et un design issu de maquettes Figma.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Objectif
 
-Currently, two official plugins are available:
+Développer une application React complète et responsive, intégrant :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+une navigation fluide via React Router,
 
-## React Compiler
+une gestion dynamique des données,
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+des composants interactifs et réutilisables.
 
-## Expanding the ESLint configuration
+ Stack technique
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React, Vite
+
+React Router
+
+Sass
+
+JavaScript ES6
+
+Données locales au format JSON (en attendant un back-end finalisé)
+
+ Compétences développées
+
+Découpage d’une interface en composants réutilisables
+
+Gestion de l’état et des événements
+
+Manipulation de listes avec .map
+
+Animations et styles avancés avec Sass
+
+Implémentation fidèle d’un design system basé sur Figma
+
+ Résultat
+
+L’application finale propose :
+
+un routage complet,
+
+un affichage dynamique des logements,
+
+un Slideshow interactif,
+
+des composants Collapse animés,
+
+un rendu responsive et fluide.
+
+Perspectives
+
+Une future intégration avec un back-end Node.js permettra d’ajouter une API temps réel et d'étendre les fonctionnalités de l'application.
