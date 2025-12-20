@@ -1,16 +1,28 @@
-# React + Vite
+# Kasa - Location immobilière
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application web de location immobilière développée avec React et React Router. Ce projet implémente une interface moderne et réactive basée sur des maquettes Figma, avec gestion des routes et composants réutilisables.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+L’objectif du projet est d’implémenter le front-end complet de l’application à partir de maquettes Figma, en utilisant React, React Router et Sass, tout en respectant des contraintes fonctionnelles précises (navigation, animations, gestion des états, page d’erreur, etc.).
 
-## React Compiler
+Les données sont simulées à partir d’un fichier JSON fourni.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Fonctionnalités
 
-## Expanding the ESLint configuration
+- **Navigation entre pages** avec React Router
+- **Galerie d'images** avec défilement circulaire
+- **Composants Collapse** animés
+- **Affichage dynamique** des biens immobiliers
+- **Design responsive** (mobile, tablette, desktop)
+- **Page d'erreur 404** personnalisée
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies utilisées
+
+- React
+- React Router
+- Vite
+- Sass (SCSS)
+- Animations CSS
+
+
