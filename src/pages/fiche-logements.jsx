@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom"; // ajout de useNavigate
 import Carrousel from "@components/carrousel.jsx";
 import Dropdown from "@components/dropdown.jsx";
-import Star from "@components/Star.jsx";
+import Star from "@components/star.jsx";
 import "./fiche-logements.scss";
 
 const FicheLogement = () => {
@@ -87,13 +87,13 @@ const FicheLogement = () => {
 
         {logement.equipments && (
           <Dropdown title="Équipements">
-           
-             <ul>
+
+            <ul>
               {logement.equipments.map((equip, index) => (
                 <li key={index}>{equip}</li>
               ))}
             </ul>
-            
+
           </Dropdown>
         )}
       </div>
